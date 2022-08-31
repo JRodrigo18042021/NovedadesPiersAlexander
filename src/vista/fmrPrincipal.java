@@ -1,9 +1,12 @@
 package vista;
 
+import controlador.controladorProveedor;
 import controlador.controloadorEmpleados;
 import controlador.controloadorProductos;
 import modelo.Empleados;
 import modelo.Productos;
+import modelo.Proveedores;
+import modelo.ProveedoresConsultas;
 import modelo.consultarEmpleados;
 import modelo.consultarProductos;
 
@@ -29,7 +32,12 @@ public class fmrPrincipal extends javax.swing.JFrame {
     }
 
     private void mostrarProveedores() {
+        Proveedores modProv = new Proveedores();
+        ProveedoresConsultas modCProv = new ProveedoresConsultas();
+        frmProveedores frmProv = new frmProveedores();
+        controladorProveedor ctrlPv = new controladorProveedor(modProv, modCProv, frmProv);
         
+        frmProv.setVisible(true);
     }
     
     private void mostrarProductos(){
@@ -42,7 +50,9 @@ public class fmrPrincipal extends javax.swing.JFrame {
     }
     
     private void mostrarVentas(){
-        
+        fmrVentas frmVent = new fmrVentas();
+        frmVent.setVisible(true);
+        frmVent.setLocationRelativeTo(null);
     }
 
     

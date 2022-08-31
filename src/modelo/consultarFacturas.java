@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class consultarVentas extends Conexion{
+public class consultarFacturas extends Conexion{
     
      public boolean Registrar( Productos pro){
         
