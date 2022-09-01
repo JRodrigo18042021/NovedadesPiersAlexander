@@ -1,68 +1,12 @@
 
 package vista;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import javax.swing.table.DefaultTableModel;
-import modelo.Conexion;
 
 public class fmrProductos extends javax.swing.JFrame {
 
     public fmrProductos() {
         initComponents();
-        setLocationRelativeTo(null);
-        try {
-            DefaultTableModel modelo = new DefaultTableModel();
-            jtEmpleados.setModel(modelo);
-            
-            PreparedStatement ps=null;
-            ResultSet rs;
-            
-            Conexion conn = new Conexion();
-            Connection con =conn.getConexion();
-            
-            String sql="SELECT * FROM productos";
-            
-            ps = con.prepareCall(sql);
-            rs= ps.executeQuery();
-            
-            ResultSetMetaData rsMd = rs.getMetaData();
-            int cantidadColumnas = rsMd.getColumnCount();
-            
-            jtEmpleados.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD,12));
-            jtEmpleados.getTableHeader().setOpaque(false);
-            jtEmpleados.getTableHeader().setBackground(new Color(33, 33, 33));
-            jtEmpleados.getTableHeader().setForeground(new Color(255, 255, 255));
-            jtEmpleados.setRowHeight(25);
-            
-            modelo.addColumn("CODIGO");
-            modelo.addColumn("NOMBRE");
-            modelo.addColumn("MARCA");
-            modelo.addColumn("COLOR");
-            modelo.addColumn("DESCRIPCION");
-            modelo.addColumn("PRECIO");
-            modelo.addColumn("STOCK");
-            
-            Object[] filas = new Object[7];
-            while(rs.next()){
-
-                filas[0] = rs.getObject(1);
-                filas[1] = rs.getObject(2);
-                filas[2] = rs.getObject(6);
-                filas[3] = rs.getObject(5);
-                filas[4] = rs.getObject(3);
-                filas[5] = rs.getObject(7);
-                filas[6] = rs.getObject(4);
-                modelo.addRow(filas);
-            }   
-        } catch (SQLException e) {
-            System.out.println(e.toString());
-        }
+ 
     }
 
     @SuppressWarnings("unchecked")
@@ -404,7 +348,6 @@ public class fmrProductos extends javax.swing.JFrame {
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
 
-        dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed

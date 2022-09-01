@@ -6,30 +6,42 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import modelo.Conexion;
+import modelo.AutUsuario;
 
 public class fmrLogin extends javax.swing.JFrame {
 
     Conexion co = new Conexion();
     Connection con = co.getConexion();
+    fmrPrincipal pri = new fmrPrincipal();
+    AutUsuario aut = new AutUsuario();
+    
+    int resultado = 0;
+    private String pass;
+    private String empleado;
+    
 
     public fmrLogin() {
         initComponents();
         setLocationRelativeTo(null);
     }
 
+  
+    
     public void ValidarUsuario() {
-        int resultado = 0;
-        String pass = String.valueOf(jpasContraseña.getPassword());
-        String empleado = txtUsuario.getText();
+       
+        pass = String.valueOf(jpasContraseña.getPassword());
+        empleado = txtUsuario.getText();
         String sql = "select * from empleados where Nombre_Empleado='" + empleado + "' and dni_Empleado='" + pass + "' ";
         try {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             if (rs.next()) {
                 resultado = 1;
+                aut.setNombre(txtUsuario.getText().toString());
+                aut.setPassword(jpasContraseña.getText().toString());
                 if (resultado == 1) {
-                    fmrPrincipal pri = new fmrPrincipal();
                     pri.setVisible(true);
+                    pri.obteneraAut(aut);
                     this.dispose();
                 }
             } else {

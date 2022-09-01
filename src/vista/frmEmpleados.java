@@ -1,71 +1,11 @@
-
 package vista;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import javax.swing.table.DefaultTableModel;
-import modelo.Conexion;
-
 public class frmEmpleados extends javax.swing.JFrame {
-
     
     public frmEmpleados() {
-        initComponents();
-        mostrarEmpleados();
+        initComponents();  
     }
-    
-    void mostrarEmpleados(){
-        setLocationRelativeTo(null);
-        try {
-            DefaultTableModel modelo = new DefaultTableModel();
-            jtEmpleados.setModel(modelo);
-            
-            PreparedStatement ps=null;
-            ResultSet rs;
-            
-            Conexion conn = new Conexion();
-            Connection con =conn.getConexion();
-            
-            String sql="SELECT * FROM empleados";
-            
-            ps = con.prepareCall(sql);
-            rs= ps.executeQuery();
-            
-            ResultSetMetaData rsMd = rs.getMetaData();
-            int cantidadColumnas = rsMd.getColumnCount();
-            
-            jtEmpleados.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD,12));
-            jtEmpleados.getTableHeader().setOpaque(false);
-            jtEmpleados.getTableHeader().setBackground(new Color(33, 33, 33));
-            jtEmpleados.getTableHeader().setForeground(new Color(255, 255, 255));
-            jtEmpleados.setRowHeight(25);
-            
-            modelo.addColumn("DNI");
-            modelo.addColumn("NOMBRE");
-            modelo.addColumn("APELLIDO");
-            modelo.addColumn("TELEFONO");
-            modelo.addColumn("DIRECCION");
-            modelo.addColumn("CORREO");
-            modelo.addColumn("CIUDAD");
-            
-            
-            while(rs.next()){
-                Object[] filas = new Object[cantidadColumnas];
-                for (int i = 0; i < cantidadColumnas; i++) {
-                    filas[i] = rs.getObject(i + 1);
-                }
-                modelo.addRow(filas);
-            }   
-        } catch (SQLException e) {
-            System.out.println(e.toString());
-        }
-    }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -415,23 +355,22 @@ public class frmEmpleados extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        // Boton salir
-        dispose();
+        //Boton Salire
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // Registrar empleados
-        mostrarEmpleados();
+        
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         // Modificar Empleados
-        mostrarEmpleados();
+        
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // Eliminar Empleados
-        mostrarEmpleados();
+        
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     /**
