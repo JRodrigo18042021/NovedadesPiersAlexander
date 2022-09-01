@@ -143,18 +143,18 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtNombre" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="txtClienteDni" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtMarca" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="txtClienteNombre" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtDescripcion" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="txtClienteDireccion" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -171,9 +171,9 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtMarca" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtDescripcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtClienteDni" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtClienteNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtClienteDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -192,7 +192,7 @@
                 <Property name="text" type="java.lang.String" value="DIRECCION DEL CLIENTE"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtMarca">
+            <Component class="javax.swing.JTextField" name="txtClienteNombre">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -219,7 +219,7 @@
                 <Property name="text" type="java.lang.String" value="NOMBRE DEL CLIENTE"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtNombre">
+            <Component class="javax.swing.JTextField" name="txtClienteDni">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -246,7 +246,7 @@
                 <Property name="text" type="java.lang.String" value="DNI DEL CLIENTE"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtDescripcion">
+            <Component class="javax.swing.JTextField" name="txtClienteDireccion">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -271,7 +271,7 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Buscar/Filtrar por Codigo">
+                <TitledBorder title="Ventas/Acciones a realizar">
                   <Font PropertyName="font" name="Tw Cen MT Condensed Extra Bold" size="18" style="0"/>
                   <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
                 </TitledBorder>
@@ -293,11 +293,11 @@
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="btnBuscar" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="btnVentasConfirmar" min="-2" pref="150" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnLimpiar1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="btnVentasLimpiar" min="-2" pref="150" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnSalir3" max="32767" attributes="0"/>
+                              <Component id="btnImprimirComprobante" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -311,9 +311,9 @@
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnLimpiar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnSalir3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnVentasConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnVentasLimpiar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnImprimirComprobante" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -321,7 +321,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnBuscar">
+            <Component class="javax.swing.JButton" name="btnVentasConfirmar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -349,7 +349,7 @@
                 <Property name="text" type="java.lang.String" value="CONFIRMA"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnLimpiar1">
+            <Component class="javax.swing.JButton" name="btnVentasLimpiar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -366,7 +366,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnSalir3">
+            <Component class="javax.swing.JButton" name="btnImprimirComprobante">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -380,7 +380,7 @@
                 <Property name="text" type="java.lang.String" value="Imprimir Comprobante"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalir3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnImprimirComprobanteActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -454,14 +454,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnBuscar1" min="-2" pref="135" max="-2" attributes="0"/>
+                          <Component id="btnBuscar" min="-2" pref="135" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="txtBuscar1" max="32767" attributes="0"/>
+                              <Component id="txtBuscar" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -474,8 +474,8 @@
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtBuscar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnBuscar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       </Group>
@@ -483,7 +483,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txtBuscar1">
+                <Component class="javax.swing.JTextField" name="txtBuscar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
@@ -499,7 +499,7 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnBuscar1">
+                <Component class="javax.swing.JButton" name="btnBuscar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -551,11 +551,11 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnEliminar1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="btnModificar1" alignment="0" pref="150" max="32767" attributes="0"/>
-                                  <Component id="btnLimpiar2" max="32767" attributes="0"/>
+                                  <Component id="btnEliminarVenta" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnModificarVenta" alignment="0" pref="150" max="32767" attributes="0"/>
+                                  <Component id="btnLimpiarCasilleroBusqueda" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="btnSalir4" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="btnSalir" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -564,19 +564,19 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="btnModificar1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnModificarVenta" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnEliminar1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEliminarVenta" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnLimpiar2" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnLimpiarCasilleroBusqueda" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="7" max="32767" attributes="0"/>
-                          <Component id="btnSalir4" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="btnModificar1">
+                <Component class="javax.swing.JButton" name="btnModificarVenta">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -590,13 +590,13 @@
                     <Property name="text" type="java.lang.String" value="Modificar Venta"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificar1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarVentaActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnEliminar1">
+                <Component class="javax.swing.JButton" name="btnEliminarVenta">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -613,7 +613,7 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnLimpiar2">
+                <Component class="javax.swing.JButton" name="btnLimpiarCasilleroBusqueda">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -630,7 +630,7 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnSalir4">
+                <Component class="javax.swing.JButton" name="btnSalir">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -644,7 +644,7 @@
                     <Property name="text" type="java.lang.String" value="Ir al Men&#xfa; Principal"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalir4ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -678,33 +678,33 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtMarca2" min="-2" pref="101" max="-2" attributes="0"/>
+                                      <Component id="txtBuscarDniCliente" min="-2" pref="101" max="-2" attributes="0"/>
                                       <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtMarca3" max="32767" attributes="0"/>
+                                      <Component id="txtBuscarNombreCliente" max="32767" attributes="0"/>
                                       <Component id="jLabel18" pref="200" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtMarca4" max="32767" attributes="0"/>
+                                      <Component id="txtBuscarDireccionCliente" max="32767" attributes="0"/>
                                       <Component id="jLabel19" pref="200" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtMarca5" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                                      <Component id="txtBuscarCodidoVenta" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
                                       <Component id="jLabel20" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtMarca6" pref="200" max="32767" attributes="0"/>
+                                      <Component id="txtBuscarNombreEmpleado" pref="200" max="32767" attributes="0"/>
                                       <Component id="jLabel21" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtMarca7" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtBuscarVentaTotal" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jLabel22" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -724,9 +724,9 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtMarca2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMarca3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMarca4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtBuscarDniCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtBuscarNombreCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtBuscarDireccionCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -736,9 +736,9 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtMarca5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMarca6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtMarca7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtBuscarCodidoVenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtBuscarNombreEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtBuscarVentaTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -746,7 +746,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txtMarca2">
+                <Component class="javax.swing.JTextField" name="txtBuscarDniCliente">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
@@ -762,7 +762,7 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtMarca3">
+                <Component class="javax.swing.JTextField" name="txtBuscarNombreCliente">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
@@ -778,7 +778,7 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtMarca4">
+                <Component class="javax.swing.JTextField" name="txtBuscarDireccionCliente">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
@@ -838,7 +838,7 @@
                     <Property name="text" type="java.lang.String" value="COD VENTA"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtMarca5">
+                <Component class="javax.swing.JTextField" name="txtBuscarCodidoVenta">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
@@ -854,7 +854,7 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtMarca6">
+                <Component class="javax.swing.JTextField" name="txtBuscarNombreEmpleado">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
@@ -892,7 +892,7 @@
                     <Property name="text" type="java.lang.String" value="S/. TOTAL DE LA VENTA"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtMarca7">
+                <Component class="javax.swing.JTextField" name="txtBuscarVentaTotal">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
@@ -932,42 +932,42 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtCodigo1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="txtVentasEmpleado" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel11" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNombre1" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="cbVentasProducto" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtMarca1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="txtVentasCantidad" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnSalir1" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="btnVentasCantidad" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtColor1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="txtVentasCalculada" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtPrecio1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="txtDescuento" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnSalir2" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="btnVentasDescuento" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtStock1" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="txtVentasTotal" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -989,15 +989,17 @@
                           <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtCodigo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNombre1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtMarca1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtPrecio1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtStock1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtColor1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnSalir1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnSalir2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtVentasEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtVentasCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDescuento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtVentasTotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtVentasCalculada" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnVentasCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnVentasDescuento" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="cbVentasProducto" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -1005,7 +1007,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="txtMarca1">
+            <Component class="javax.swing.JTextField" name="txtVentasCantidad">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -1032,22 +1034,6 @@
                 <Property name="text" type="java.lang.String" value="CANTIDAD"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtNombre1">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="33" red="33" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1059,7 +1045,7 @@
                 <Property name="text" type="java.lang.String" value="PRODUCTO"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtCodigo1">
+            <Component class="javax.swing.JTextField" name="txtVentasEmpleado">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -1072,7 +1058,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodigo1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtVentasEmpleadoActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1100,7 +1086,7 @@
                 <Property name="text" type="java.lang.String" value="DESCUENTO"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtPrecio1">
+            <Component class="javax.swing.JTextField" name="txtDescuento">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -1127,7 +1113,7 @@
                 <Property name="text" type="java.lang.String" value="TOTAL"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtStock1">
+            <Component class="javax.swing.JTextField" name="txtVentasTotal">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -1154,7 +1140,7 @@
                 <Property name="text" type="java.lang.String" value="S/. VENTA"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtColor1">
+            <Component class="javax.swing.JTextField" name="txtVentasCalculada">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -1170,7 +1156,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnSalir1">
+            <Component class="javax.swing.JButton" name="btnVentasCantidad">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -1184,7 +1170,7 @@
                 <Property name="text" type="java.lang.String" value="CANCULAR VENTA"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalir1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVentasCantidadActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1201,7 +1187,7 @@
                 <Property name="text" type="java.lang.String" value="CANCULA LA VENTA"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnSalir2">
+            <Component class="javax.swing.JButton" name="btnVentasDescuento">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -1215,7 +1201,7 @@
                 <Property name="text" type="java.lang.String" value="APLICAR DESCUENTO"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalir2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVentasDescuentoActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1231,6 +1217,21 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="APLICA TU DESCUENTO"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbVentasProducto">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>

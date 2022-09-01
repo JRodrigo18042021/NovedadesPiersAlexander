@@ -74,56 +74,56 @@ public class fmrVentas extends javax.swing.JFrame {
         jtEmpleados = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        txtMarca = new javax.swing.JTextField();
+        txtClienteNombre = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
+        txtClienteDni = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtDescripcion = new javax.swing.JTextField();
+        txtClienteDireccion = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        btnBuscar = new javax.swing.JButton();
+        btnVentasConfirmar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        btnLimpiar1 = new javax.swing.JButton();
-        btnSalir3 = new javax.swing.JButton();
+        btnVentasLimpiar = new javax.swing.JButton();
+        btnImprimirComprobante = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
-        txtBuscar1 = new javax.swing.JTextField();
-        btnBuscar1 = new javax.swing.JButton();
+        txtBuscar = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        btnModificar1 = new javax.swing.JButton();
-        btnEliminar1 = new javax.swing.JButton();
-        btnLimpiar2 = new javax.swing.JButton();
-        btnSalir4 = new javax.swing.JButton();
+        btnModificarVenta = new javax.swing.JButton();
+        btnEliminarVenta = new javax.swing.JButton();
+        btnLimpiarCasilleroBusqueda = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
-        txtMarca2 = new javax.swing.JTextField();
-        txtMarca3 = new javax.swing.JTextField();
-        txtMarca4 = new javax.swing.JTextField();
+        txtBuscarDniCliente = new javax.swing.JTextField();
+        txtBuscarNombreCliente = new javax.swing.JTextField();
+        txtBuscarDireccionCliente = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        txtMarca5 = new javax.swing.JTextField();
-        txtMarca6 = new javax.swing.JTextField();
+        txtBuscarCodidoVenta = new javax.swing.JTextField();
+        txtBuscarNombreEmpleado = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        txtMarca7 = new javax.swing.JTextField();
+        txtBuscarVentaTotal = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
-        txtMarca1 = new javax.swing.JTextField();
+        txtVentasCantidad = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        txtNombre1 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        txtCodigo1 = new javax.swing.JTextField();
+        txtVentasEmpleado = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        txtPrecio1 = new javax.swing.JTextField();
+        txtDescuento = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        txtStock1 = new javax.swing.JTextField();
+        txtVentasTotal = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        txtColor1 = new javax.swing.JTextField();
-        btnSalir1 = new javax.swing.JButton();
+        txtVentasCalculada = new javax.swing.JTextField();
+        btnVentasCantidad = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
-        btnSalir2 = new javax.swing.JButton();
+        btnVentasDescuento = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
+        cbVentasProducto = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -170,25 +170,25 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("DIRECCION DEL CLIENTE");
 
-        txtMarca.setBackground(new java.awt.Color(51, 51, 51));
-        txtMarca.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMarca.setForeground(new java.awt.Color(255, 255, 255));
+        txtClienteNombre.setBackground(new java.awt.Color(51, 51, 51));
+        txtClienteNombre.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtClienteNombre.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("NOMBRE DEL CLIENTE");
 
-        txtNombre.setBackground(new java.awt.Color(51, 51, 51));
-        txtNombre.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtNombre.setForeground(new java.awt.Color(255, 255, 255));
+        txtClienteDni.setBackground(new java.awt.Color(51, 51, 51));
+        txtClienteDni.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtClienteDni.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("DNI DEL CLIENTE");
 
-        txtDescripcion.setBackground(new java.awt.Color(51, 51, 51));
-        txtDescripcion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtDescripcion.setForeground(new java.awt.Color(255, 255, 255));
+        txtClienteDireccion.setBackground(new java.awt.Color(51, 51, 51));
+        txtClienteDireccion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtClienteDireccion.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -196,16 +196,16 @@ public class fmrVentas extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtClienteDni, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtClienteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtClienteDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -218,37 +218,37 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtClienteDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtClienteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtClienteDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar/Filtrar por Codigo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ventas/Acciones a realizar", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel3.setForeground(new java.awt.Color(255, 255, 255));
 
-        btnBuscar.setBackground(new java.awt.Color(204, 0, 0));
-        btnBuscar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar.setText("Confrimar Venta");
+        btnVentasConfirmar.setBackground(new java.awt.Color(204, 0, 0));
+        btnVentasConfirmar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnVentasConfirmar.setForeground(new java.awt.Color(255, 255, 255));
+        btnVentasConfirmar.setText("Confrimar Venta");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CONFIRMA");
 
-        btnLimpiar1.setBackground(new java.awt.Color(204, 0, 0));
-        btnLimpiar1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnLimpiar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiar1.setText("Cancelar Venta");
+        btnVentasLimpiar.setBackground(new java.awt.Color(204, 0, 0));
+        btnVentasLimpiar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnVentasLimpiar.setForeground(new java.awt.Color(255, 255, 255));
+        btnVentasLimpiar.setText("Cancelar Venta");
 
-        btnSalir3.setBackground(new java.awt.Color(204, 0, 0));
-        btnSalir3.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnSalir3.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalir3.setText("Imprimir Comprobante");
-        btnSalir3.addActionListener(new java.awt.event.ActionListener() {
+        btnImprimirComprobante.setBackground(new java.awt.Color(204, 0, 0));
+        btnImprimirComprobante.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnImprimirComprobante.setForeground(new java.awt.Color(255, 255, 255));
+        btnImprimirComprobante.setText("Imprimir Comprobante");
+        btnImprimirComprobante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalir3ActionPerformed(evt);
+                btnImprimirComprobanteActionPerformed(evt);
             }
         });
 
@@ -263,11 +263,11 @@ public class fmrVentas extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVentasConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnLimpiar1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVentasLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnSalir3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(btnImprimirComprobante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -277,9 +277,9 @@ public class fmrVentas extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBuscar)
-                    .addComponent(btnLimpiar1)
-                    .addComponent(btnSalir3))
+                    .addComponent(btnVentasConfirmar)
+                    .addComponent(btnVentasLimpiar)
+                    .addComponent(btnImprimirComprobante))
                 .addContainerGap())
         );
 
@@ -290,14 +290,14 @@ public class fmrVentas extends javax.swing.JFrame {
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Buscar/Filtrar por Codigo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel6.setForeground(new java.awt.Color(255, 255, 255));
 
-        txtBuscar1.setBackground(new java.awt.Color(51, 51, 51));
-        txtBuscar1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtBuscar1.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuscar.setBackground(new java.awt.Color(51, 51, 51));
+        txtBuscar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtBuscar.setForeground(new java.awt.Color(255, 255, 255));
 
-        btnBuscar1.setBackground(new java.awt.Color(204, 0, 0));
-        btnBuscar1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnBuscar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar1.setText("Buscar");
+        btnBuscar.setBackground(new java.awt.Color(204, 0, 0));
+        btnBuscar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setText("Buscar");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -309,13 +309,13 @@ public class fmrVentas extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(txtBuscar1))
+                    .addComponent(txtBuscar))
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -325,41 +325,41 @@ public class fmrVentas extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBuscar1))
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscar))
                 .addGap(38, 38, 38))
         );
 
         jPanel7.setBackground(new java.awt.Color(102, 102, 102));
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Aciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        btnModificar1.setBackground(new java.awt.Color(204, 0, 0));
-        btnModificar1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnModificar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnModificar1.setText("Modificar Venta");
-        btnModificar1.addActionListener(new java.awt.event.ActionListener() {
+        btnModificarVenta.setBackground(new java.awt.Color(204, 0, 0));
+        btnModificarVenta.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnModificarVenta.setForeground(new java.awt.Color(255, 255, 255));
+        btnModificarVenta.setText("Modificar Venta");
+        btnModificarVenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificar1ActionPerformed(evt);
+                btnModificarVentaActionPerformed(evt);
             }
         });
 
-        btnEliminar1.setBackground(new java.awt.Color(204, 0, 0));
-        btnEliminar1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnEliminar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminar1.setText("Eliminar Venta");
+        btnEliminarVenta.setBackground(new java.awt.Color(204, 0, 0));
+        btnEliminarVenta.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnEliminarVenta.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarVenta.setText("Eliminar Venta");
 
-        btnLimpiar2.setBackground(new java.awt.Color(204, 0, 0));
-        btnLimpiar2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnLimpiar2.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiar2.setText("Limpair Venta");
+        btnLimpiarCasilleroBusqueda.setBackground(new java.awt.Color(204, 0, 0));
+        btnLimpiarCasilleroBusqueda.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnLimpiarCasilleroBusqueda.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpiarCasilleroBusqueda.setText("Limpair Venta");
 
-        btnSalir4.setBackground(new java.awt.Color(204, 0, 0));
-        btnSalir4.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnSalir4.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalir4.setText("Ir al Menú Principal");
-        btnSalir4.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setBackground(new java.awt.Color(204, 0, 0));
+        btnSalir.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalir.setText("Ir al Menú Principal");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalir4ActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -371,39 +371,39 @@ public class fmrVentas extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnEliminar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnModificar1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                        .addComponent(btnLimpiar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(btnSalir4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnEliminarVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnModificarVenta, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                        .addComponent(btnLimpiarCasilleroBusqueda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(btnModificar1)
+                .addComponent(btnModificarVenta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEliminar1)
+                .addComponent(btnEliminarVenta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnLimpiar2)
+                .addComponent(btnLimpiarCasilleroBusqueda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(btnSalir4))
+                .addComponent(btnSalir))
         );
 
         jPanel8.setBackground(new java.awt.Color(102, 102, 102));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ventas/Venta Encontrada", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel8.setForeground(new java.awt.Color(255, 255, 255));
 
-        txtMarca2.setBackground(new java.awt.Color(51, 51, 51));
-        txtMarca2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMarca2.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuscarDniCliente.setBackground(new java.awt.Color(51, 51, 51));
+        txtBuscarDniCliente.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtBuscarDniCliente.setForeground(new java.awt.Color(255, 255, 255));
 
-        txtMarca3.setBackground(new java.awt.Color(51, 51, 51));
-        txtMarca3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMarca3.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuscarNombreCliente.setBackground(new java.awt.Color(51, 51, 51));
+        txtBuscarNombreCliente.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtBuscarNombreCliente.setForeground(new java.awt.Color(255, 255, 255));
 
-        txtMarca4.setBackground(new java.awt.Color(51, 51, 51));
-        txtMarca4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMarca4.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuscarDireccionCliente.setBackground(new java.awt.Color(51, 51, 51));
+        txtBuscarDireccionCliente.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtBuscarDireccionCliente.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
@@ -421,13 +421,13 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("COD VENTA");
 
-        txtMarca5.setBackground(new java.awt.Color(51, 51, 51));
-        txtMarca5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMarca5.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuscarCodidoVenta.setBackground(new java.awt.Color(51, 51, 51));
+        txtBuscarCodidoVenta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtBuscarCodidoVenta.setForeground(new java.awt.Color(255, 255, 255));
 
-        txtMarca6.setBackground(new java.awt.Color(51, 51, 51));
-        txtMarca6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMarca6.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuscarNombreEmpleado.setBackground(new java.awt.Color(51, 51, 51));
+        txtBuscarNombreEmpleado.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtBuscarNombreEmpleado.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
@@ -437,9 +437,9 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("S/. TOTAL DE LA VENTA");
 
-        txtMarca7.setBackground(new java.awt.Color(51, 51, 51));
-        txtMarca7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMarca7.setForeground(new java.awt.Color(255, 255, 255));
+        txtBuscarVentaTotal.setBackground(new java.awt.Color(51, 51, 51));
+        txtBuscarVentaTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtBuscarVentaTotal.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -450,27 +450,27 @@ public class fmrVentas extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtMarca2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBuscarDniCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel17))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtMarca3)
+                            .addComponent(txtBuscarNombreCliente)
                             .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtMarca4)
+                            .addComponent(txtBuscarDireccionCliente)
                             .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtMarca5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBuscarCodidoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtMarca6, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(txtBuscarNombreEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                             .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtMarca7)
+                            .addComponent(txtBuscarVentaTotal)
                             .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
@@ -484,9 +484,9 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addComponent(jLabel19))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtMarca2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMarca3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMarca4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBuscarDniCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscarNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscarDireccionCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
@@ -494,9 +494,9 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addComponent(jLabel22))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtMarca5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMarca6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMarca7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBuscarCodidoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscarNombreEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscarVentaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -526,28 +526,24 @@ public class fmrVentas extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(102, 102, 102));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ventas/Nueva Venta", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        txtMarca1.setBackground(new java.awt.Color(51, 51, 51));
-        txtMarca1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtMarca1.setForeground(new java.awt.Color(255, 255, 255));
+        txtVentasCantidad.setBackground(new java.awt.Color(51, 51, 51));
+        txtVentasCantidad.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtVentasCantidad.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("CANTIDAD");
 
-        txtNombre1.setBackground(new java.awt.Color(51, 51, 51));
-        txtNombre1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtNombre1.setForeground(new java.awt.Color(255, 255, 255));
-
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("PRODUCTO");
 
-        txtCodigo1.setBackground(new java.awt.Color(51, 51, 51));
-        txtCodigo1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtCodigo1.setForeground(new java.awt.Color(255, 255, 255));
-        txtCodigo1.addActionListener(new java.awt.event.ActionListener() {
+        txtVentasEmpleado.setBackground(new java.awt.Color(51, 51, 51));
+        txtVentasEmpleado.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtVentasEmpleado.setForeground(new java.awt.Color(255, 255, 255));
+        txtVentasEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCodigo1ActionPerformed(evt);
+                txtVentasEmpleadoActionPerformed(evt);
             }
         });
 
@@ -559,33 +555,33 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("DESCUENTO");
 
-        txtPrecio1.setBackground(new java.awt.Color(51, 51, 51));
-        txtPrecio1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtPrecio1.setForeground(new java.awt.Color(255, 255, 255));
+        txtDescuento.setBackground(new java.awt.Color(51, 51, 51));
+        txtDescuento.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtDescuento.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("TOTAL");
 
-        txtStock1.setBackground(new java.awt.Color(51, 51, 51));
-        txtStock1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtStock1.setForeground(new java.awt.Color(255, 255, 255));
+        txtVentasTotal.setBackground(new java.awt.Color(51, 51, 51));
+        txtVentasTotal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtVentasTotal.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("S/. VENTA");
 
-        txtColor1.setBackground(new java.awt.Color(51, 51, 51));
-        txtColor1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtColor1.setForeground(new java.awt.Color(255, 255, 255));
+        txtVentasCalculada.setBackground(new java.awt.Color(51, 51, 51));
+        txtVentasCalculada.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtVentasCalculada.setForeground(new java.awt.Color(255, 255, 255));
 
-        btnSalir1.setBackground(new java.awt.Color(204, 0, 0));
-        btnSalir1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnSalir1.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalir1.setText("CANCULAR VENTA");
-        btnSalir1.addActionListener(new java.awt.event.ActionListener() {
+        btnVentasCantidad.setBackground(new java.awt.Color(204, 0, 0));
+        btnVentasCantidad.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnVentasCantidad.setForeground(new java.awt.Color(255, 255, 255));
+        btnVentasCantidad.setText("CANCULAR VENTA");
+        btnVentasCantidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalir1ActionPerformed(evt);
+                btnVentasCantidadActionPerformed(evt);
             }
         });
 
@@ -593,13 +589,13 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("CANCULA LA VENTA");
 
-        btnSalir2.setBackground(new java.awt.Color(204, 0, 0));
-        btnSalir2.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnSalir2.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalir2.setText("APLICAR DESCUENTO");
-        btnSalir2.addActionListener(new java.awt.event.ActionListener() {
+        btnVentasDescuento.setBackground(new java.awt.Color(204, 0, 0));
+        btnVentasDescuento.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnVentasDescuento.setForeground(new java.awt.Color(255, 255, 255));
+        btnVentasDescuento.setText("APLICAR DESCUENTO");
+        btnVentasDescuento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalir2ActionPerformed(evt);
+                btnVentasDescuentoActionPerformed(evt);
             }
         });
 
@@ -607,41 +603,43 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("APLICA TU DESCUENTO");
 
+        cbVentasProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtCodigo1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVentasEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
-                    .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbVentasProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtMarca1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVentasCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSalir1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVentasCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtColor1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVentasCalculada, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPrecio1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSalir2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVentasDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtStock1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVentasTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
                 .addContainerGap())
         );
@@ -659,15 +657,16 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addComponent(jLabel15)
                     .addComponent(jLabel16))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMarca1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPrecio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtStock1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtColor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSalir1)
-                    .addComponent(btnSalir2))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtVentasEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtVentasCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtVentasTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtVentasCalculada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVentasCantidad)
+                        .addComponent(btnVentasDescuento))
+                    .addComponent(cbVentasProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -712,29 +711,29 @@ public class fmrVentas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtCodigo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigo1ActionPerformed
+    private void btnImprimirComprobanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirComprobanteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCodigo1ActionPerformed
+    }//GEN-LAST:event_btnImprimirComprobanteActionPerformed
 
-    private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
+    private void btnModificarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVentaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSalir1ActionPerformed
+    }//GEN-LAST:event_btnModificarVentaActionPerformed
 
-    private void btnSalir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir2ActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSalir2ActionPerformed
+    }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void btnSalir3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir3ActionPerformed
+    private void btnVentasDescuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasDescuentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSalir3ActionPerformed
+    }//GEN-LAST:event_btnVentasDescuentoActionPerformed
 
-    private void btnModificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificar1ActionPerformed
+    private void btnVentasCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasCantidadActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnModificar1ActionPerformed
+    }//GEN-LAST:event_btnVentasCantidadActionPerformed
 
-    private void btnSalir4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir4ActionPerformed
+    private void txtVentasEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVentasEmpleadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnSalir4ActionPerformed
+    }//GEN-LAST:event_txtVentasEmpleadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -774,15 +773,16 @@ public class fmrVentas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnBuscar;
-    public javax.swing.JButton btnBuscar1;
-    public javax.swing.JButton btnEliminar1;
-    public javax.swing.JButton btnLimpiar1;
-    private javax.swing.JButton btnLimpiar2;
-    public javax.swing.JButton btnModificar1;
-    public javax.swing.JButton btnSalir1;
-    public javax.swing.JButton btnSalir2;
-    public javax.swing.JButton btnSalir3;
-    public javax.swing.JButton btnSalir4;
+    public javax.swing.JButton btnEliminarVenta;
+    public javax.swing.JButton btnImprimirComprobante;
+    public javax.swing.JButton btnLimpiarCasilleroBusqueda;
+    public javax.swing.JButton btnModificarVenta;
+    public javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnVentasCantidad;
+    public javax.swing.JButton btnVentasConfirmar;
+    public javax.swing.JButton btnVentasDescuento;
+    public javax.swing.JButton btnVentasLimpiar;
+    private javax.swing.JComboBox<String> cbVentasProducto;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -812,21 +812,20 @@ public class fmrVentas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable jtEmpleados;
-    public javax.swing.JTextField txtBuscar1;
-    private javax.swing.JTextField txtCodigo1;
-    private javax.swing.JTextField txtColor1;
-    private javax.swing.JTextField txtDescripcion;
-    private javax.swing.JTextField txtMarca;
-    private javax.swing.JTextField txtMarca1;
-    public javax.swing.JTextField txtMarca2;
-    public javax.swing.JTextField txtMarca3;
-    public javax.swing.JTextField txtMarca4;
-    public javax.swing.JTextField txtMarca5;
-    public javax.swing.JTextField txtMarca6;
-    public javax.swing.JTextField txtMarca7;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNombre1;
-    private javax.swing.JTextField txtPrecio1;
-    private javax.swing.JTextField txtStock1;
+    public javax.swing.JTextField txtBuscar;
+    public javax.swing.JTextField txtBuscarCodidoVenta;
+    public javax.swing.JTextField txtBuscarDireccionCliente;
+    public javax.swing.JTextField txtBuscarDniCliente;
+    public javax.swing.JTextField txtBuscarNombreCliente;
+    public javax.swing.JTextField txtBuscarNombreEmpleado;
+    public javax.swing.JTextField txtBuscarVentaTotal;
+    public javax.swing.JTextField txtClienteDireccion;
+    public javax.swing.JTextField txtClienteDni;
+    public javax.swing.JTextField txtClienteNombre;
+    public javax.swing.JTextField txtDescuento;
+    public javax.swing.JTextField txtVentasCalculada;
+    public javax.swing.JTextField txtVentasCantidad;
+    public javax.swing.JTextField txtVentasEmpleado;
+    public javax.swing.JTextField txtVentasTotal;
     // End of variables declaration//GEN-END:variables
 }
