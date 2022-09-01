@@ -1,9 +1,18 @@
 
 package controlador;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import modelo.Conexion;
 import modelo.Productos;
 import modelo.consultarProductos;
 import modelo.Empleados;
@@ -21,7 +30,8 @@ public class controloadorVentas implements ActionListener {
     consultarEmpleados modEmplC;
     Ventas modVent;
     consultarVentas modVentC;
-    fmrVentas frmVent;
+    fmrVentas frmVent ;
+    fmrVentas frmVent1 = new fmrVentas();
 
     public controloadorVentas(Productos modPro, consultarProductos modProC, Empleados modEmpl, consultarEmpleados modEmplC, Ventas modVent, consultarVentas modVentC, fmrVentas frmVent) {
         this.modPro = modPro;
@@ -42,7 +52,16 @@ public class controloadorVentas implements ActionListener {
         this.frmVent.btnEliminarVenta.addActionListener(this);
         this.frmVent.btnLimpiarCasilleroBusqueda.addActionListener(this);
         this.frmVent.btnSalir.addActionListener(this);
+        mostrarVentas();
+        
+        
     }
+
+    public controloadorVentas() {
+        modVentC.mostrarCombo(frmVent1.cbVentasProducto);
+    }
+    
+    
     
     public void limpiarVentas(){
         frmVent.txtVentasEmpleado.setText(null);
@@ -154,6 +173,53 @@ public class controloadorVentas implements ActionListener {
         
         if(e.getSource()==frmVent.btnSalir){
             frmVent.dispose();
+        }
+    }
+    
+    public void mostrarVentas(){
+        frmVent.setLocationRelativeTo(null);
+        try {
+            DefaultTableModel modeloProv = new DefaultTableModel();
+            frmVent.tbVentas.setModel(modeloProv);
+            
+            PreparedStatement ps= null;
+            ResultSet rs;
+            
+            Conexion conn = new Conexion();
+            Connection con = conn.getConexion();
+            
+            String sql = "SELECT * FROM ventas";
+            
+            ps = con.prepareCall(sql);
+            rs = ps.executeQuery();
+            
+            ResultSetMetaData rsMd = rs.getMetaData();
+            int cantidadColum = rsMd.getColumnCount();
+            
+            frmVent.tbVentas.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+            frmVent.tbVentas.getTableHeader().setOpaque(false);
+            frmVent.tbVentas.getTableHeader().setBackground(new Color(33, 33, 33));
+            frmVent.tbVentas.getTableHeader().setForeground(new Color(225, 255, 255));
+            frmVent.tbVentas.setRowHeight(25);
+            
+            modeloProv.addColumn("id_Venta");
+            modeloProv.addColumn("dni_Empleado");
+            modeloProv.addColumn("RUC_DNI_Cliente");
+            modeloProv.addColumn("Nombre_Cliente");
+            modeloProv.addColumn("Direccion_Cliente");
+            modeloProv.addColumn("Cantidad_Venta");
+            modeloProv.addColumn("Codigo_Producto");
+            modeloProv.addColumn("Nombre_Producto");
+            
+            while (rs.next()) {                
+                Object[] filas = new Object[cantidadColum];
+                for (int i = 0; i < cantidadColum; i++) {
+                    filas[i] = rs.getObject(i+1);
+                }
+                modeloProv.addRow(filas);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.toString());
         }
     }
     

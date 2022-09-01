@@ -10,15 +10,24 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import javax.swing.table.DefaultTableModel;
 import modelo.Conexion;
+import controlador.controloadorVentas;
+
 
 public class fmrVentas extends javax.swing.JFrame {
-
+    
+    controloadorVentas ctrlventas = new controloadorVentas();
+    
     public fmrVentas() {
         initComponents();
+        mostrarVentas();
+        
+    }
+    
+    public void mostrarVentas(){
         setLocationRelativeTo(null);
         try {
             DefaultTableModel modelo = new DefaultTableModel();
-            jtEmpleados.setModel(modelo);
+            tbVentas.setModel(modelo);
             
             PreparedStatement ps=null;
             ResultSet rs;
@@ -34,11 +43,11 @@ public class fmrVentas extends javax.swing.JFrame {
             ResultSetMetaData rsMd = rs.getMetaData();
             int cantidadColumnas = rsMd.getColumnCount();
             
-            jtEmpleados.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD,12));
-            jtEmpleados.getTableHeader().setOpaque(false);
-            jtEmpleados.getTableHeader().setBackground(new Color(33, 33, 33));
-            jtEmpleados.getTableHeader().setForeground(new Color(255, 255, 255));
-            jtEmpleados.setRowHeight(25);
+            tbVentas.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD,12));
+            tbVentas.getTableHeader().setOpaque(false);
+            tbVentas.getTableHeader().setBackground(new Color(33, 33, 33));
+            tbVentas.getTableHeader().setForeground(new Color(255, 255, 255));
+            tbVentas.setRowHeight(25);
             
             modelo.addColumn("CODIGO");
             modelo.addColumn("NOMBRE");
@@ -71,7 +80,7 @@ public class fmrVentas extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jtEmpleados = new javax.swing.JTable();
+        tbVentas = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         txtClienteNombre = new javax.swing.JTextField();
@@ -132,11 +141,11 @@ public class fmrVentas extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ventas", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jtEmpleados.setAutoCreateRowSorter(true);
-        jtEmpleados.setBackground(new java.awt.Color(204, 0, 0));
-        jtEmpleados.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jtEmpleados.setForeground(new java.awt.Color(255, 255, 255));
-        jtEmpleados.setModel(new javax.swing.table.DefaultTableModel(
+        tbVentas.setAutoCreateRowSorter(true);
+        tbVentas.setBackground(new java.awt.Color(204, 0, 0));
+        tbVentas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        tbVentas.setForeground(new java.awt.Color(255, 255, 255));
+        tbVentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -161,7 +170,7 @@ public class fmrVentas extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jtEmpleados);
+        jScrollPane1.setViewportView(tbVentas);
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ventas/Datos del Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18), new java.awt.Color(255, 255, 255))); // NOI18N
@@ -791,7 +800,7 @@ public class fmrVentas extends javax.swing.JFrame {
     public javax.swing.JButton btnVentasCalcular;
     public javax.swing.JButton btnVentasConfirmar;
     public javax.swing.JButton btnVentasLimpiar;
-    private javax.swing.JComboBox<String> cbVentasProducto;
+    public javax.swing.JComboBox<String> cbVentasProducto;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -820,7 +829,7 @@ public class fmrVentas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jtEmpleados;
+    public javax.swing.JTable tbVentas;
     public javax.swing.JTextField txtBuscar;
     public javax.swing.JTextField txtBuscarCodidoVenta;
     public javax.swing.JTextField txtBuscarDireccionCliente;

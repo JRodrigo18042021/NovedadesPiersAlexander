@@ -30,22 +30,17 @@ public class fmrPrincipal extends javax.swing.JFrame {
     public fmrPrincipal() {
         initComponents();
         setLocationRelativeTo(null);
+        
     }
     
-    public void identificarUsuario(){
-        try {
-            JOptionPane.showMessageDialog(null, "exito => " + aut.getPassword());
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "fracaso");
-        }
-    }
     
     public void obteneraAut(AutUsuario aut){
         this.aut = aut;
+        txtUsuario.setText(aut.getNombre());
+        txtUsuario.setEditable(false);
     }
 
     private void mostrarEmpleados() {
-        identificarUsuario();
         Empleados modEmp = new Empleados();
         consultarEmpleados modCEmp = new consultarEmpleados();
         frmEmpleados frmEmp = new frmEmpleados();
@@ -60,7 +55,7 @@ public class fmrPrincipal extends javax.swing.JFrame {
         ProveedoresConsultas modCProv = new ProveedoresConsultas();
         frmProveedores frmProv = new frmProveedores();
         controladorProveedor ctrlPv = new controladorProveedor(modProv, modCProv, frmProv);
-        
+        frmProv.obteneraAut(aut);
         frmProv.setVisible(true);
     }
     
@@ -437,16 +432,16 @@ public class fmrPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(txtUsuario)))
+                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -468,7 +463,7 @@ public class fmrPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
 
         pack();

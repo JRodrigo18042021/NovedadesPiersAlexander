@@ -13,6 +13,7 @@ public class fmrLogin extends javax.swing.JFrame {
     Conexion co = new Conexion();
     Connection con = co.getConexion();
     fmrPrincipal pri = new fmrPrincipal();
+    frmProveedores pro = new frmProveedores();
     AutUsuario aut = new AutUsuario();
     
     int resultado = 0;
@@ -40,8 +41,9 @@ public class fmrLogin extends javax.swing.JFrame {
                 aut.setNombre(txtUsuario.getText().toString());
                 aut.setPassword(jpasContraseña.getText().toString());
                 if (resultado == 1) {
-                    pri.setVisible(true);
                     pri.obteneraAut(aut);
+                    pri.setVisible(true);
+                    
                     this.dispose();
                 }
             } else {

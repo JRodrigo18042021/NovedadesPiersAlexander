@@ -1,9 +1,19 @@
 package vista;
 
+import modelo.AutUsuario;
+
 public class frmProveedores extends javax.swing.JFrame {
 
+    AutUsuario aut = new AutUsuario();
+    
     public frmProveedores() {
         initComponents();
+    }
+    
+    public void obteneraAut(AutUsuario aut){
+        this.aut = aut;
+        txtdniEmp.setText(aut.getPassword());
+        txtdniEmp.setEditable(false);
     }
     
     @SuppressWarnings("unchecked")

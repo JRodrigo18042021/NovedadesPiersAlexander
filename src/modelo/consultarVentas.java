@@ -1,10 +1,15 @@
 
 package modelo;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import javax.swing.JComboBox;
+import javax.swing.table.DefaultTableModel;
 
 public class consultarVentas extends Conexion{
     
@@ -140,5 +145,26 @@ public class consultarVentas extends Conexion{
                 System.out.println(e);
             }
         }   
-    } 
+    }
+    
+    public void mostrarCombo(JComboBox productos){
+        String sql = "SELECT Nombre_Producto FROM productos";
+        try {
+            
+            PreparedStatement ps= null;
+            ResultSet rs;
+            
+            Conexion conn = new Conexion();
+            Connection con = conn.getConexion();
+            
+            ps = con.prepareCall(sql);
+            rs = ps.executeQuery();
+            
+            while (rs.next()) {                
+                productos.addItem(rs.getString("Nombre_Producto"));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+        }
+    }
 }

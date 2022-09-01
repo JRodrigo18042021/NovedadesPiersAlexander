@@ -14,15 +14,16 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Conexion;
 import modelo.Proveedores;
+import modelo.AutUsuario;
 import modelo.ProveedoresConsultas;
 import vista.frmProveedores;
-import vista.fmrLogin;
 
 public class controladorProveedor implements ActionListener{
     Proveedores modPv;
     ProveedoresConsultas provC;
     frmProveedores frm;
-    fmrLogin EMPLEADO;
+    AutUsuario EMPLEADO = new AutUsuario();
+    
     
 
     public controladorProveedor(Proveedores prov, ProveedoresConsultas provC, frmProveedores frm) {
@@ -49,6 +50,7 @@ public class controladorProveedor implements ActionListener{
         frm.txtdireccion.setText(null);
         frm.txtrucEliminado.setText(null);
     }
+    
 
     @Override
     public void actionPerformed(ActionEvent e) {
