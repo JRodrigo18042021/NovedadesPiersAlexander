@@ -77,6 +77,7 @@ public class fmrPrincipal extends javax.swing.JFrame {
         consultarVentas modVenC = new consultarVentas();
         fmrVentas frmVent = new fmrVentas();
         controloadorVentas crtlV = new controloadorVentas(modPro, modCPro, modEmp, modCEmp, modVent, modVenC, frmVent);
+        frmVent.obteneraAut(aut);
         frmVent.setVisible(true);
         frmVent.setLocationRelativeTo(null);
     }

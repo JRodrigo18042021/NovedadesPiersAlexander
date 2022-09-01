@@ -147,24 +147,5 @@ public class consultarVentas extends Conexion{
         }   
     }
     
-    public void mostrarCombo(JComboBox productos){
-        String sql = "SELECT Nombre_Producto FROM productos";
-        try {
-            
-            PreparedStatement ps= null;
-            ResultSet rs;
-            
-            Conexion conn = new Conexion();
-            Connection con = conn.getConexion();
-            
-            ps = con.prepareCall(sql);
-            rs = ps.executeQuery();
-            
-            while (rs.next()) {                
-                productos.addItem(rs.getString("Nombre_Producto"));
-            }
-        } catch (SQLException e) {
-            System.out.println(e.toString());
-        }
-    }
+    
 }

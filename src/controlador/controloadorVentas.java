@@ -57,14 +57,11 @@ public class controloadorVentas implements ActionListener {
         
     }
 
-    public controloadorVentas() {
-        modVentC.mostrarCombo(frmVent1.cbVentasProducto);
-    }
     
     
     
     public void limpiarVentas(){
-        frmVent.txtVentasEmpleado.setText(null);
+        frmVent.txtVentasCalculada.setText(null);
         frmVent.txtVentasCantidad.setText(null);
         frmVent.txtVentasCantidad.setText(null);
         frmVent.txtVentasDescuento.setText(null);

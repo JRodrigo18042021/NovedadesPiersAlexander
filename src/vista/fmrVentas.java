@@ -11,16 +11,48 @@ import java.sql.SQLException;
 import javax.swing.table.DefaultTableModel;
 import modelo.Conexion;
 import controlador.controloadorVentas;
+import javax.swing.JComboBox;
+import modelo.AutUsuario;
 
 
 public class fmrVentas extends javax.swing.JFrame {
     
-    controloadorVentas ctrlventas = new controloadorVentas();
+    AutUsuario aut = new AutUsuario();
     
     public fmrVentas() {
         initComponents();
         mostrarVentas();
+        mostrarCombo();
         
+    }
+    
+    public void obteneraAut(AutUsuario aut){
+        this.aut = aut;
+        txtVentasEmpleado.setText(aut.getPassword());
+        txtVentasEmpleado.setEditable(false);
+    }
+    
+    public void mostrarCombo(){
+        String sql = "SELECT * FROM productos";
+        try {
+            
+            PreparedStatement ps= null;
+            ResultSet rs;
+            
+            Conexion conn = new Conexion();
+            Connection con = conn.getConexion();
+            
+            ps = con.prepareCall(sql);
+            rs = ps.executeQuery();
+            
+            while(rs.next()){
+                cbVentasProducto.addItem(rs.getString(2));                                                  
+              
+                
+            }
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+        }
     }
     
     public void mostrarVentas(){
@@ -616,8 +648,6 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("APLICA TU DESCUENTO");
-
-        cbVentasProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
