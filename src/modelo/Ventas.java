@@ -4,79 +4,86 @@ package modelo;
 
 public class Ventas {
     
-    private int id;
-    private int dniEmpleado;
-    private String rucOdniCliente;
-    private String nombreCliente;
-    private String direccionCliente;
-    private String cantidadVenta;
-    private String codigoProducto;
-    private String nombreProducto;
+    private int Id;
+    private int ProductoCantidad;
+    private double VentaCantidad;
+    private double VentaCalculada;
+    private double Descuento;
+    private double VentaTotal;
+    private String DniCliente;
+    private String NombreCliente;
+    private String DireccionCliente;
 
     public int getId() {
-        return id;
+        return Id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int Id) {
+        this.Id = Id;
     }
 
-    public int getDniEmpleado() {
-        return dniEmpleado;
+    public int getProductoCantidad() {
+        return ProductoCantidad;
     }
 
-    public void setDniEmpleado(int dniEmpleado) {
-        this.dniEmpleado = dniEmpleado;
+    public void setProductoCantidad(int ProductoCantidad) {
+        this.ProductoCantidad = ProductoCantidad;
     }
 
-    public String getRucOdniCliente() {
-        return rucOdniCliente;
+    public double getVentaCantidad() {
+        return VentaCantidad;
+    }
+    
+    public void setVentaCantidad(double VentaCantidad) {
+        this.VentaCantidad = VentaCantidad;
     }
 
-    public void setRucOdniCliente(String rucOdniCliente) {
-        this.rucOdniCliente = rucOdniCliente;
+    public double getVentaCalculada() {
+        return VentaCalculada;
+    }
+
+    public void setVentaCalculada(double VentaCalculada) {
+        this.VentaCalculada = VentaCalculada;
+    }
+
+    public double getDescuento() {
+        return Descuento;
+    }
+
+    public void setDescuento(double Descuento) {
+        this.Descuento = Descuento;
+    }
+
+    public double getVentaTotal() {
+        return VentaTotal;
+    }
+
+    public void setVentaTotal(double VentaTotal) {
+        this.VentaTotal = VentaTotal;
+    }
+
+    public String getDniCliente() {
+        return DniCliente;
+    }
+
+    public void setDniCliente(String DniCliente) {
+        this.DniCliente = DniCliente;
     }
 
     public String getNombreCliente() {
-        return nombreCliente;
+        return NombreCliente;
     }
 
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
+    public void setNombreCliente(String NombreCliente) {
+        this.NombreCliente = NombreCliente;
     }
 
     public String getDireccionCliente() {
-        return direccionCliente;
+        return DireccionCliente;
     }
 
-    public void setDireccionCliente(String direccionCliente) {
-        this.direccionCliente = direccionCliente;
+    public void setDireccionCliente(String DireccionCliente) {
+        this.DireccionCliente = DireccionCliente;
     }
 
-    public String getCantidadVenta() {
-        return cantidadVenta;
-    }
-
-    public void setCantidadVenta(String cantidadVenta) {
-        this.cantidadVenta = cantidadVenta;
-    }
-
-    public String getCodigoProducto() {
-        return codigoProducto;
-    }
-
-    public void setCodigoProducto(String codigoProducto) {
-        this.codigoProducto = codigoProducto;
-    }
-
-    public String getNombreProducto() {
-        return nombreProducto;
-    }
-
-    public void setNombreProducto(String nombreProducto) {
-        this.nombreProducto = nombreProducto;
-    }
-    
-    
-    
 }

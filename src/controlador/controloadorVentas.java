@@ -6,101 +6,154 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import modelo.Productos;
 import modelo.consultarProductos;
+import modelo.Empleados;
+import modelo.consultarEmpleados;
+import modelo.Ventas;
+import modelo.consultarVentas;
 import vista.fmrProductos;
+import vista.fmrVentas;
 
 public class controloadorVentas implements ActionListener {
     
-    Productos mod;
-    consultarProductos modC;
-    fmrProductos frm;
+    Productos modPro;
+    consultarProductos modProC;
+    Empleados modEmpl;
+    consultarEmpleados modEmplC;
+    Ventas modVent;
+    consultarVentas modVentC;
+    fmrVentas frmVent;
 
-    public controloadorVentas(Productos mod, consultarProductos modC, fmrProductos frm) {
-        this.mod = mod;
-        this.modC = modC;
-        this.frm = frm;
-        this.frm.btnGuardar.addActionListener(this);
-        this.frm.btnModificar.addActionListener(this);
-        this.frm.btnEliminar.addActionListener(this);
-        this.frm.btnLimpiar.addActionListener(this);
-        this.frm.btnBuscar.addActionListener(this);
+    public controloadorVentas(Productos modPro, consultarProductos modProC, Empleados modEmpl, consultarEmpleados modEmplC, Ventas modVent, consultarVentas modVentC, fmrVentas frmVent) {
+        this.modPro = modPro;
+        this.modProC = modProC;
+        this.modEmpl = modEmpl;
+        this.modEmplC = modEmplC;
+        this.modVent = modVent;
+        this.modVentC = modVentC;
+        this.frmVent = frmVent;
+        
+        this.frmVent.btnVentasCalcular.addActionListener(this);
+        this.frmVent.btnVentasAplicarDescuento.addActionListener(this);
+        this.frmVent.btnVentasConfirmar.addActionListener(this);
+        this.frmVent.btnVentasLimpiar.addActionListener(this);
+        this.frmVent.btnImprimirComprobante.addActionListener(this);
+        this.frmVent.btnBuscar.addActionListener(this);
+        this.frmVent.btnModificarVenta.addActionListener(this);
+        this.frmVent.btnEliminarVenta.addActionListener(this);
+        this.frmVent.btnLimpiarCasilleroBusqueda.addActionListener(this);
+        this.frmVent.btnSalir.addActionListener(this);
     }
     
-    public void limpiar(){
-        frm.txtCodigo.setText(null);
-        frm.txtNombre.setText(null);
-        frm.txtMarca.setText(null);
-        frm.txtColor.setText(null);
-        frm.txtDescripcion.setText(null);
-        frm.txtPrecio.setText(null);
-        frm.txtStock.setText(null);
-        frm.txtBuscar.setText(null);
+    public void limpiarVentas(){
+        frmVent.txtVentasEmpleado.setText(null);
+        frmVent.txtVentasCantidad.setText(null);
+        frmVent.txtVentasCantidad.setText(null);
+        frmVent.txtVentasDescuento.setText(null);
+        frmVent.txtVentasTotal.setText(null);
+        frmVent.txtClienteDni.setText(null);
+        frmVent.txtClienteNombre.setText(null);
+        frmVent.txtClienteDireccion.setText(null);
+    }
+    
+    public void limpiarBusqueda(){
+        frmVent.txtBuscarDniCliente.setText(null);
+        frmVent.txtBuscarNombreCliente.setText(null);
+        frmVent.txtBuscarDireccionCliente.setText(null);
+        frmVent.txtBuscarCodidoVenta.setText(null);
+        frmVent.txtBuscarNombreEmpleado.setText(null);
+        frmVent.txtVentasTotal.setText(null);  
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==frm.btnGuardar){
-            mod.setCodigo(frm.txtCodigo.getText());
-            mod.setNombre(frm.txtNombre.getText());
-            mod.setMarca(frm.txtMarca.getText());
-            mod.setColor(frm.txtColor.getText());
-            mod.setDescripcion(frm.txtDescripcion.getText());
-            mod.setPrecio(Double.parseDouble(frm.txtPrecio.getText()));
-            mod.setCantidad(Integer.parseInt(frm.txtStock.getText()));
-            if(modC.Registrar(mod)){
-                JOptionPane.showMessageDialog(null, "GUARDADO CORRRECTAMENTE");
-                limpiar();
+        if(e.getSource()==frmVent.btnVentasCalcular){
+            modVent.setVentaCalculada((Double.parseDouble(frmVent.txtVentasCantidad.getText()))*modPro.getPrecio());
+            if(modVentC.CalcularVenta(modVent, modPro, modEmpl)){
+                JOptionPane.showMessageDialog(null, "Calculado Correctamente");
+                frmVent.txtVentasCalculada.setText(String.valueOf(modVent.getVentaCalculada()));
             }else{
-                JOptionPane.showMessageDialog(null, "ERROR GUARDAR");
-                limpiar();
+                JOptionPane.showMessageDialog(null, "Erros al Calcular");
             }
         }
         
-        if(e.getSource()==frm.btnModificar){
-            mod.setCodigo(frm.txtCodigo.getText());
-            mod.setNombre(frm.txtNombre.getText());
-            mod.setMarca(frm.txtMarca.getText());
-            mod.setColor(frm.txtColor.getText());
-            mod.setDescripcion(frm.txtDescripcion.getText());
-            mod.setPrecio(Double.parseDouble(frm.txtPrecio.getText()));
-            mod.setCantidad(Integer.parseInt(frm.txtStock.getText()));
-            if(modC.Modificar(mod)){
-                JOptionPane.showMessageDialog(null, "MODFICDO CORRRECTAMENTE");
-                limpiar();
+        if(e.getSource()==frmVent.btnVentasAplicarDescuento){
+            modVent.setVentaTotal((Double.parseDouble(frmVent.txtVentasCalculada.getText()))-(Double.parseDouble(frmVent.txtVentasDescuento.getText())));
+            if(modVentC.AplicarDescuento(modVent, modPro, modEmpl)){
+                JOptionPane.showMessageDialog(null, "Calculado Correctamente");
+                frmVent.txtVentasTotal.setText(String.valueOf(modVent.getVentaTotal()));
             }else{
-                JOptionPane.showMessageDialog(null, "ERROR MODIFICAR");
-                limpiar();
+                JOptionPane.showMessageDialog(null, "Erros al Calcular");
             }
         }
         
-        if(e.getSource()==frm.btnEliminar){
-            mod.setCodigo(frm.txtCodigo.getText());
-            if(modC.eliminar(mod)){
-                JOptionPane.showMessageDialog(null, "ELIMINADO CORRRECTAMENTE");
-                limpiar();
+        if(e.getSource()==frmVent.btnVentasConfirmar){
+            modEmpl.setDni(frmVent.txtVentasEmpleado.getText());
+            modVent.setDniCliente(frmVent.txtClienteDni.getText());
+            modVent.setNombreCliente(frmVent.txtClienteNombre.getText());
+            modVent.setDireccionCliente(frmVent.txtClienteDireccion.getText());
+            modVent.setVentaTotal(Double.parseDouble(frmVent.txtVentasTotal.getText()));
+            modPro.setCodigo("001");
+            if(modVentC.Registrar(modVent, modPro, modEmpl)){
+                JOptionPane.showMessageDialog(null, "Venta Exitosa");
+                limpiarVentas();
             }else{
-                JOptionPane.showMessageDialog(null, "ERROR ELIMINAR");
-                limpiar();
+                JOptionPane.showMessageDialog(null, "Venta Fallida");
+                limpiarVentas();
             }
         }
         
-        if(e.getSource()==frm.btnBuscar){
-            mod.setCodigo(frm.txtBuscar.getText());
-            if(modC.buscar(mod)){
-                frm.txtCodigo.setText(mod.getCodigo());
-                frm.txtNombre.setText(mod.getNombre());
-                frm.txtMarca.setText(mod.getMarca());
-                frm.txtColor.setText(mod.getColor());
-                frm.txtDescripcion.setText(mod.getDescripcion());
-                frm.txtPrecio.setText(String.valueOf(mod.getPrecio()));
-                frm.txtStock.setText(String.valueOf(mod.getCantidad()));
-                
+        if(e.getSource()==frmVent.btnVentasLimpiar){
+            limpiarVentas();
+        }
+        
+        if(e.getSource()==frmVent.btnBuscar){
+            modVent.setId(Integer.parseInt(frmVent.txtBuscar.getText()));
+            if(modVentC.buscar(modVent, modPro, modEmpl)){
+                frmVent.txtBuscarDniCliente.setText(modVent.getDniCliente());
+                frmVent.txtBuscarNombreCliente.setText(modVent.getNombreCliente());
+                frmVent.txtBuscarDireccionCliente.setText(modVent.getDireccionCliente());
+                frmVent.txtBuscarCodidoVenta.setText(String.valueOf(modVent.getId()));
+                frmVent.txtBuscarNombreEmpleado.setText(modEmpl.getNombres());
+                frmVent.txtBuscarVentaTotal.setText(String.valueOf(modVent.getVentaTotal())); 
             }else{
-                JOptionPane.showMessageDialog(null, "NO SE ENCONTRARON RESULTADOS");
-                limpiar();
+                JOptionPane.showMessageDialog(null, "Busquda Sin Resultados");
+                limpiarBusqueda();
             }
         }
-        if(e.getSource()==frm.btnLimpiar){
-            limpiar();
+        
+        if(e.getSource()==frmVent.btnModificarVenta){
+            modVent.setId(Integer.parseInt(frmVent.txtBuscarCodidoVenta.getText()));
+            modVent.setDniCliente(frmVent.txtBuscarDniCliente.getText());
+            modVent.setNombreCliente(frmVent.txtBuscarNombreCliente.getText());
+            modVent.setDireccionCliente(frmVent.txtBuscarDireccionCliente.getText());
+            modVent.setVentaTotal(Double.parseDouble(frmVent.txtBuscarVentaTotal.getText()));
+            modEmpl.setNombres(frmVent.txtBuscarNombreEmpleado.getText());
+            if(modVentC.Modificar(modVent, modPro, modEmpl)){
+                JOptionPane.showMessageDialog(null, "Exito al Modificar");
+                limpiarBusqueda();
+            }else{
+                JOptionPane.showMessageDialog(null, "Modificar Fallido");
+                limpiarBusqueda();
+            }
+        }
+        
+        if(e.getSource()==frmVent.btnLimpiarCasilleroBusqueda){
+            limpiarBusqueda();
+        }
+        
+        if(e.getSource()==frmVent.btnEliminarVenta){
+            modVent.setId(Integer.parseInt(frmVent.txtBuscarCodidoVenta.getText()));
+            if(modVentC.eliminar(modVent)){
+                JOptionPane.showMessageDialog(null, "Exito al Eliminar");
+                limpiarBusqueda();
+            }else{
+                JOptionPane.showMessageDialog(null, "Eliminar Fallido");
+                limpiarBusqueda();
+            }
+        }
+        
+        if(e.getSource()==frmVent.btnSalir){
+            frmVent.dispose();
         }
     }
     

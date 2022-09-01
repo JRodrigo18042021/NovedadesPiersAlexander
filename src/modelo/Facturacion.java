@@ -3,34 +3,44 @@ package modelo;
 
 public class Facturacion {
     
-    private String codigo;
-    private int idVenta;
-    private String venta;
+    private int id;
+    private String CodigoProducto;
+    private int IdVenta;
+    private String FechaFacturacion;
 
-    public String getCodigo() {
-        return codigo;
+    public int getId() {
+        return id;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCodigoProducto() {
+        return CodigoProducto;
+    }
+
+    public void setCodigoProducto(String CodigoProducto) {
+        this.CodigoProducto = CodigoProducto;
     }
 
     public int getIdVenta() {
-        return idVenta;
+        return IdVenta;
     }
 
-    public void setIdVenta(int idVenta) {
-        this.idVenta = idVenta;
+    public void setIdVenta(int IdVenta) {
+        this.IdVenta = IdVenta;
     }
 
-    public String getVenta() {
-        return venta;
+    public String getFechaFacturacion() {
+        return FechaFacturacion;
     }
 
-    public void setVenta(String venta) {
-        this.venta = venta;
+    public void setFechaFacturacion(String FechaFacturacion) {
+        this.FechaFacturacion = FechaFacturacion;
     }
     
     
-    
+
+       
 }

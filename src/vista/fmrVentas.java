@@ -114,14 +114,14 @@ public class fmrVentas extends javax.swing.JFrame {
         txtVentasEmpleado = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        txtDescuento = new javax.swing.JTextField();
+        txtVentasDescuento = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         txtVentasTotal = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         txtVentasCalculada = new javax.swing.JTextField();
-        btnVentasCantidad = new javax.swing.JButton();
+        btnVentasCalcular = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
-        btnVentasDescuento = new javax.swing.JButton();
+        btnVentasAplicarDescuento = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         cbVentasProducto = new javax.swing.JComboBox<>();
 
@@ -321,9 +321,9 @@ public class fmrVentas extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscar))
@@ -347,6 +347,11 @@ public class fmrVentas extends javax.swing.JFrame {
         btnEliminarVenta.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
         btnEliminarVenta.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminarVenta.setText("Eliminar Venta");
+        btnEliminarVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarVentaActionPerformed(evt);
+            }
+        });
 
         btnLimpiarCasilleroBusqueda.setBackground(new java.awt.Color(204, 0, 0));
         btnLimpiarCasilleroBusqueda.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
@@ -555,9 +560,9 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("DESCUENTO");
 
-        txtDescuento.setBackground(new java.awt.Color(51, 51, 51));
-        txtDescuento.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtDescuento.setForeground(new java.awt.Color(255, 255, 255));
+        txtVentasDescuento.setBackground(new java.awt.Color(51, 51, 51));
+        txtVentasDescuento.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtVentasDescuento.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
@@ -575,13 +580,13 @@ public class fmrVentas extends javax.swing.JFrame {
         txtVentasCalculada.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         txtVentasCalculada.setForeground(new java.awt.Color(255, 255, 255));
 
-        btnVentasCantidad.setBackground(new java.awt.Color(204, 0, 0));
-        btnVentasCantidad.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnVentasCantidad.setForeground(new java.awt.Color(255, 255, 255));
-        btnVentasCantidad.setText("CANCULAR VENTA");
-        btnVentasCantidad.addActionListener(new java.awt.event.ActionListener() {
+        btnVentasCalcular.setBackground(new java.awt.Color(204, 0, 0));
+        btnVentasCalcular.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnVentasCalcular.setForeground(new java.awt.Color(255, 255, 255));
+        btnVentasCalcular.setText("CALCULAR VENTA");
+        btnVentasCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVentasCantidadActionPerformed(evt);
+                btnVentasCalcularActionPerformed(evt);
             }
         });
 
@@ -589,13 +594,13 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("CANCULA LA VENTA");
 
-        btnVentasDescuento.setBackground(new java.awt.Color(204, 0, 0));
-        btnVentasDescuento.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
-        btnVentasDescuento.setForeground(new java.awt.Color(255, 255, 255));
-        btnVentasDescuento.setText("APLICAR DESCUENTO");
-        btnVentasDescuento.addActionListener(new java.awt.event.ActionListener() {
+        btnVentasAplicarDescuento.setBackground(new java.awt.Color(204, 0, 0));
+        btnVentasAplicarDescuento.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 14)); // NOI18N
+        btnVentasAplicarDescuento.setForeground(new java.awt.Color(255, 255, 255));
+        btnVentasAplicarDescuento.setText("APLICAR DESCUENTO");
+        btnVentasAplicarDescuento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVentasDescuentoActionPerformed(evt);
+                btnVentasAplicarDescuentoActionPerformed(evt);
             }
         });
 
@@ -623,7 +628,7 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addComponent(jLabel9))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnVentasCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVentasCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -631,11 +636,11 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addComponent(jLabel14))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVentasDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnVentasDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnVentasAplicarDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -661,11 +666,11 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtVentasEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtVentasCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtVentasDescuento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtVentasTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtVentasCalculada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnVentasCantidad)
-                        .addComponent(btnVentasDescuento))
+                        .addComponent(btnVentasCalcular)
+                        .addComponent(btnVentasAplicarDescuento))
                     .addComponent(cbVentasProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -712,28 +717,32 @@ public class fmrVentas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnImprimirComprobanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirComprobanteActionPerformed
-        // TODO add your handling code here:
+        // Imprimir comprobandte
     }//GEN-LAST:event_btnImprimirComprobanteActionPerformed
 
     private void btnModificarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarVentaActionPerformed
-        // TODO add your handling code here:
+        // Modificar ventas
     }//GEN-LAST:event_btnModificarVentaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        // TODO add your handling code here:
+        // Reresar
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void btnVentasDescuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasDescuentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVentasDescuentoActionPerformed
+    private void btnVentasAplicarDescuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasAplicarDescuentoActionPerformed
+        // Descuento
+    }//GEN-LAST:event_btnVentasAplicarDescuentoActionPerformed
 
-    private void btnVentasCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasCantidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnVentasCantidadActionPerformed
+    private void btnVentasCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasCalcularActionPerformed
+        // Candidad de ventas
+    }//GEN-LAST:event_btnVentasCalcularActionPerformed
 
     private void txtVentasEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVentasEmpleadoActionPerformed
-        // TODO add your handling code here:
+        // 
     }//GEN-LAST:event_txtVentasEmpleadoActionPerformed
+
+    private void btnEliminarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarVentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarVentaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -778,9 +787,9 @@ public class fmrVentas extends javax.swing.JFrame {
     public javax.swing.JButton btnLimpiarCasilleroBusqueda;
     public javax.swing.JButton btnModificarVenta;
     public javax.swing.JButton btnSalir;
-    public javax.swing.JButton btnVentasCantidad;
+    public javax.swing.JButton btnVentasAplicarDescuento;
+    public javax.swing.JButton btnVentasCalcular;
     public javax.swing.JButton btnVentasConfirmar;
-    public javax.swing.JButton btnVentasDescuento;
     public javax.swing.JButton btnVentasLimpiar;
     private javax.swing.JComboBox<String> cbVentasProducto;
     private javax.swing.JLabel jLabel10;
@@ -822,9 +831,9 @@ public class fmrVentas extends javax.swing.JFrame {
     public javax.swing.JTextField txtClienteDireccion;
     public javax.swing.JTextField txtClienteDni;
     public javax.swing.JTextField txtClienteNombre;
-    public javax.swing.JTextField txtDescuento;
     public javax.swing.JTextField txtVentasCalculada;
     public javax.swing.JTextField txtVentasCantidad;
+    public javax.swing.JTextField txtVentasDescuento;
     public javax.swing.JTextField txtVentasEmpleado;
     public javax.swing.JTextField txtVentasTotal;
     // End of variables declaration//GEN-END:variables

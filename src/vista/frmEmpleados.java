@@ -16,6 +16,10 @@ public class frmEmpleados extends javax.swing.JFrame {
     
     public frmEmpleados() {
         initComponents();
+        mostrarEmpleados();
+    }
+    
+    void mostrarEmpleados(){
         setLocationRelativeTo(null);
         try {
             DefaultTableModel modelo = new DefaultTableModel();
@@ -59,7 +63,7 @@ public class frmEmpleados extends javax.swing.JFrame {
             }   
         } catch (SQLException e) {
             System.out.println(e.toString());
-        }  
+        }
     }
     
     @SuppressWarnings("unchecked")
@@ -301,16 +305,31 @@ public class frmEmpleados extends javax.swing.JFrame {
         btnGuardar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 11)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
         btnGuardar.setText("Registrar Empleado");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         btnModificar.setBackground(new java.awt.Color(204, 0, 0));
         btnModificar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 11)); // NOI18N
         btnModificar.setForeground(new java.awt.Color(255, 255, 255));
         btnModificar.setText("Modificar Empleado");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
 
         btnEliminar.setBackground(new java.awt.Color(204, 0, 0));
         btnEliminar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 11)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setText("Eliminar Empleado");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setBackground(new java.awt.Color(204, 0, 0));
         btnLimpiar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 11)); // NOI18N
@@ -399,6 +418,21 @@ public class frmEmpleados extends javax.swing.JFrame {
         // Boton salir
         dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // Registrar empleados
+        mostrarEmpleados();
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        // Modificar Empleados
+        mostrarEmpleados();
+    }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        // Eliminar Empleados
+        mostrarEmpleados();
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     /**
      * @param args the command line arguments

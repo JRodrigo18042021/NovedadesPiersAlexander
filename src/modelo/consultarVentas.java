@@ -8,21 +8,39 @@ import java.sql.SQLException;
 
 public class consultarVentas extends Conexion{
     
-     public boolean Registrar( Productos pro){
+    public boolean CalcularVenta(Ventas Ven, Productos pro, Empleados empl){
+        try {
+            buscar(Ven, pro, empl);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public boolean AplicarDescuento(Ventas Ven, Productos pro, Empleados empl){
+        try {
+            buscar(Ven, pro, empl);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public boolean Registrar( Ventas Ven, Productos pro, Empleados empl){
         
         PreparedStatement ps=null;
         Connection con =getConexion();
-        String sql="INSERT INTO productos (Codigo_Producto,Nombre_Producto,Marca_Producto,Color_Producto,Descripcion_Producto,Precio_Producto,Cantidad_Producto) VALUES(?,?,?,?,?,?,?)";
+        String sql="INSERT INTO ventas (dni_Empleado,RUC_DNI_Cliente,Nombre_Cliente,Direccion_Cliente,Cantidad_Venta,Codigo_Producto,Nombre_Producto) VALUES(?,?,?,?,?,?,?)";
         
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1, pro.getCodigo());
-            ps.setString(2, pro.getNombre());
-            ps.setString(3, pro.getMarca());
-            ps.setString(4, pro.getColor());
-            ps.setString(5, pro.getDescripcion());
-            ps.setDouble(6, pro.getPrecio());
-            ps.setInt(7, pro.getCantidad());
+            ps.setString(1, empl.getDni());
+            ps.setString(2, Ven.getDniCliente());
+            ps.setString(3, Ven.getNombreCliente());
+            ps.setString(4, Ven.getDireccionCliente());
+            ps.setDouble(5, Ven.getVentaTotal());
+            ps.setString(6, pro.getCodigo());
+            ps.setString(7, pro.getNombre());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -37,24 +55,24 @@ public class consultarVentas extends Conexion{
         }   
     }
      
-    public boolean buscar( Productos pro){
+    public boolean buscar( Ventas Ven, Productos pro, Empleados empl){
         
         PreparedStatement ps=null;
         Connection con =getConexion();
-        String sql="SELECT * FROM productos WHERE Codigo_Producto=?";
+        String sql="SELECT * FROM ventas WHERE id_Venta =?";
         ResultSet rs=null;
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1, pro.getCodigo());
+            ps.setInt(1, Ven.getId());
             rs = ps.executeQuery();
             if(rs.next()){
+                empl.setDni(rs.getString("dni_Empleado"));
+                Ven.setDniCliente(rs.getString("RUC_DNI_Cliente"));
+                Ven.setNombreCliente(rs.getString("Nombre_Cliente"));
+                Ven.setDireccionCliente(rs.getString("Direccion_Cliente"));
+                Ven.setVentaTotal(rs.getDouble("Cantidad_Venta"));
                 pro.setCodigo(rs.getString("Codigo_Producto"));
                 pro.setNombre(rs.getString("Nombre_Producto"));
-                pro.setMarca(rs.getString("Marca_Producto"));
-                pro.setColor(rs.getString("Color_Producto"));
-                pro.setDescripcion(rs.getString("Descripcion_Producto"));
-                pro.setPrecio(rs.getDouble("Precio_Producto"));
-                pro.setCantidad(rs.getInt("Cantidad_Producto"));
                 return true;
             }
             return false;
@@ -70,22 +88,23 @@ public class consultarVentas extends Conexion{
         }   
     }
      
-    public boolean Modificar( Productos pro){
+    public boolean Modificar( Ventas Ven, Productos pro, Empleados empl){
         
         PreparedStatement ps=null;
         Connection con =getConexion();
-        String sql="UPDATE productos SET Codigo_Producto =?,Nombre_Producto=?,Marca_Producto=?,Color_Producto=?,Descripcion_Producto=?,Precio_Producto=?,Cantidad_Producto=? WHERE Codigo_Producto =?";
+        String sql="UPDATE ventas SET id_Venta=? dni_Empleado=?,RUC_DNI_Cliente=?,Nombre_Cliente=?,Direccion_Cliente=?,Cantidad_Venta=?,Codigo_Producto=?,Nombre_Producto=? WHERE id_Venta=?";
         
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1, pro.getCodigo());
-            ps.setString(2, pro.getNombre());
-            ps.setString(3, pro.getMarca());
-            ps.setString(4, pro.getColor());
-            ps.setString(5, pro.getDescripcion());
-            ps.setDouble(6, pro.getPrecio());
-            ps.setInt(7, pro.getCantidad());
-            ps.setString(8, pro.getCodigo());
+            ps.setInt(1, Ven.getId());
+            ps.setString(2, empl.getDni());
+            ps.setString(3, Ven.getDniCliente());
+            ps.setString(4, Ven.getNombreCliente());
+            ps.setString(5, Ven.getDireccionCliente());
+            ps.setDouble(6, Ven.getVentaTotal());
+            ps.setString(7, pro.getCodigo());
+            ps.setString(8, pro.getNombre());
+            ps.setInt(9, Ven.getId());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -100,15 +119,15 @@ public class consultarVentas extends Conexion{
         }
     }
      
-    public boolean eliminar( Productos pro){
+    public boolean eliminar( Ventas Ven){
         
         PreparedStatement ps=null;
         Connection con =getConexion();
-        String sql="DELETE FROM empleados WHERE dni_Empleado=?";
+        String sql="DELETE FROM ventas WHERE id_Venta=?";
         
         try {
             ps = con.prepareStatement(sql);
-            ps.setString(1, pro.getCodigo());
+            ps.setInt(1, Ven.getId());
             ps.execute();
             return true;
         } catch (SQLException e) {

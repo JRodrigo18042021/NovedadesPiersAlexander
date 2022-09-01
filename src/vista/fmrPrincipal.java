@@ -3,18 +3,26 @@ package vista;
 import controlador.controladorProveedor;
 import controlador.controloadorEmpleados;
 import controlador.controloadorProductos;
+import controlador.controloadorVentas;
+
+import modelo.Proveedores;
 import modelo.Empleados;
 import modelo.Productos;
-import modelo.Proveedores;
+import modelo.Ventas;
+
 import modelo.ProveedoresConsultas;
 import modelo.consultarEmpleados;
 import modelo.consultarProductos;
+import modelo.consultarVentas;
+
+import vista.frmProveedores;
+import vista.frmEmpleados;
+import vista.fmrProductos;
+import vista.fmrVentas;
+
 
 public class fmrPrincipal extends javax.swing.JFrame {
 
-    frmEmpleados empleados;
-    fmrProveedores proveedores;
-    fmrProductos productos;
 
     public fmrPrincipal() {
         initComponents();
@@ -50,7 +58,14 @@ public class fmrPrincipal extends javax.swing.JFrame {
     }
     
     private void mostrarVentas(){
+        Productos modPro = new Productos();
+        consultarProductos modCPro = new consultarProductos();
+        Empleados modEmp = new Empleados();
+        consultarEmpleados modCEmp = new consultarEmpleados();
+        Ventas modVent = new Ventas();
+        consultarVentas modVenC = new consultarVentas();
         fmrVentas frmVent = new fmrVentas();
+        controloadorVentas crtlV = new controloadorVentas(modPro, modCPro, modEmp, modCEmp, modVent, modVenC, frmVent);
         frmVent.setVisible(true);
         frmVent.setLocationRelativeTo(null);
     }

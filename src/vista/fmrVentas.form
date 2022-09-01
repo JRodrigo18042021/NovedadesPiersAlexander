@@ -470,9 +470,9 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="txtBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -609,6 +609,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Eliminar Venta"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarVentaActionPerformed"/>
+                  </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
@@ -947,7 +950,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnVentasCantidad" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="btnVentasCalcular" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -957,12 +960,12 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtDescuento" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="txtVentasDescuento" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnVentasDescuento" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="btnVentasAplicarDescuento" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -993,11 +996,11 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="txtVentasEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtVentasCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtDescuento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtVentasDescuento" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtVentasTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtVentasCalculada" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnVentasCantidad" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnVentasDescuento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnVentasCalcular" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnVentasAplicarDescuento" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="cbVentasProducto" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -1086,7 +1089,7 @@
                 <Property name="text" type="java.lang.String" value="DESCUENTO"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtDescuento">
+            <Component class="javax.swing.JTextField" name="txtVentasDescuento">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
@@ -1156,7 +1159,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="btnVentasCantidad">
+            <Component class="javax.swing.JButton" name="btnVentasCalcular">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -1167,10 +1170,10 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="CANCULAR VENTA"/>
+                <Property name="text" type="java.lang.String" value="CALCULAR VENTA"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVentasCantidadActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVentasCalcularActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1187,7 +1190,7 @@
                 <Property name="text" type="java.lang.String" value="CANCULA LA VENTA"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnVentasDescuento">
+            <Component class="javax.swing.JButton" name="btnVentasAplicarDescuento">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -1201,7 +1204,7 @@
                 <Property name="text" type="java.lang.String" value="APLICAR DESCUENTO"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVentasDescuentoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVentasAplicarDescuentoActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
