@@ -109,7 +109,10 @@ public class controloadorVentas implements ActionListener {
             modVent.setDireccionCliente(frmVent.txtClienteDireccion.getText());
             modVent.setVentaTotal(Double.parseDouble(frmVent.txtVentasTotal.getText()));
             modPro.setCodigo("001");
+            modPro.setNombre("001");
+            
             if(modVentC.Registrar(modVent, modPro, modEmpl)){
+                mostrarVentas();
                 JOptionPane.showMessageDialog(null, "Venta Exitosa");
                 limpiarVentas();
             }else{
