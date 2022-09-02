@@ -12,7 +12,9 @@ import javax.swing.table.DefaultTableModel;
 import modelo.Conexion;
 import controlador.controloadorVentas;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import modelo.AutUsuario;
+import modelo.Productos;
 
 
 public class fmrVentas extends javax.swing.JFrame {
@@ -165,6 +167,7 @@ public class fmrVentas extends javax.swing.JFrame {
         btnVentasAplicarDescuento = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         cbVentasProducto = new javax.swing.JComboBox<>();
+        BtnCapturar = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -649,6 +652,13 @@ public class fmrVentas extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("APLICA TU DESCUENTO");
 
+        BtnCapturar.setText("capturar");
+        BtnCapturar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCapturarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -659,7 +669,10 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(8, 8, 8)
+                        .addComponent(BtnCapturar))
                     .addComponent(cbVentasProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -699,7 +712,8 @@ public class fmrVentas extends javax.swing.JFrame {
                     .addComponent(jLabel13)
                     .addComponent(jLabel14)
                     .addComponent(jLabel15)
-                    .addComponent(jLabel16))
+                    .addComponent(jLabel16)
+                    .addComponent(BtnCapturar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -783,6 +797,12 @@ public class fmrVentas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminarVentaActionPerformed
 
+    private void BtnCapturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCapturarActionPerformed
+        // CAPTURAR
+        int opcion =  cbVentasProducto.getSelectedIndex();
+        JOptionPane.showMessageDialog(null, "opcion "+opcion);
+    }//GEN-LAST:event_BtnCapturarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -820,6 +840,7 @@ public class fmrVentas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton BtnCapturar;
     public javax.swing.JButton btnBuscar;
     public javax.swing.JButton btnEliminarVenta;
     public javax.swing.JButton btnImprimirComprobante;
